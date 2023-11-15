@@ -14,14 +14,15 @@ const listaMail = [
 // chiedo all'utente la sua mail personale per poterla verificare
 const userMail = document.querySelector('input')
 const button = document.querySelector('button')
+const final = document.querySelector('h2.word')
 
 button.addEventListener('click', function(){
     const mail = (userMail.value)
 
     if( listaMail.includes(mail)){
-        console.log('SI')
+        final.innerHTML = ('Puoi entrare!')
     } else {
-        console.log('NO')
+        final.innerHTML = ('Non puoi entrare!')
     }
 })
 
