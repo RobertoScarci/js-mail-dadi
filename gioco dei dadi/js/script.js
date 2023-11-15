@@ -1,13 +1,19 @@
 // inizio con l'individuare le variabili che mi saranno d'aiuto
-const userNumber = Math.floor( Math.random() * 6);
-const cpuNumber = Math.floor( Math.random() * 6);
+const userNumber = Math.floor( Math.random() * 6) + 1;
+const cpuNumber = Math.floor( Math.random() * 6) + 1;
+const number = document.querySelector('div.number')
+const select = document.querySelector('div.select')
+const otherSelect = document.querySelector('div.other-select')
+
 
 // stabilisco il vincitore in base al numero più alto
 if( userNumber < cpuNumber){
-    console.log('Hai perso!')
+    number.innerHTML = ('Hai perso!')
 } else if( userNumber > cpuNumber){
-    console.log('Hai vinto!')
+    number.innerHTML = ('Hai vinto!')
 } else if( userNumber === cpuNumber){
-    console.log('Avete lo stesso numero')
+    number.innerHTML = ('Avete Pareggiato!')
 }
-console.log(userNumber, cpuNumber)
+
+select.innerHTML = (userNumber)
+otherSelect.innerHTML = (cpuNumber)
